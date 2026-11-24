@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#211a16">
+  <meta name="description" content="Meet Morrow Coffee House: thoughtfully sourced coffee, beautiful bakes, and a little more room for slow mornings.">
+  <title>Morrow Coffee House — A little more morning</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header" id="home">
+    <a class="brand" href="#home" aria-label="Morrow Coffee House home">
+      <span class="brand-mark" aria-hidden="true">m.</span>
+      <span class="brand-name">morrow<span>coffee house</span></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">
+      <span></span><span></span>
+    </button>
+    <nav class="navigation" id="primary-navigation" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#specials">Specials</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="cart-button" type="button" aria-label="Shopping cart, 0 items" data-cart-open>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.2 11.1a2 2 0 0 0 2 1.6h8.5a2 2 0 0 0 1.9-1.4L21 8H6M10 21a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm8 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"/></svg>
+      <span class="cart-label">Bag</span><span class="cart-count" aria-live="polite">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-image"></div>
+      <div class="hero-content">
+        <p class="eyebrow hero-eyebrow"><span></span> Your neighborhood, a little slower</p>
+        <h1 id="hero-title">Fresh coffee,<br><em>beautiful moments.</em></h1>
+        <p class="hero-copy">Good things take time. We make yours count with small-batch coffee, from-scratch bakes, and a warm seat waiting for you.</p>
+        <div class="hero-actions">
+          <a class="button button-light" href="#menu">Explore our menu <span aria-hidden="true">↗</span></a>
+          <a class="text-link hero-order" href="#specials">Find your new favorite <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="hero-note"><span class="note-line"></span><span>GOOD COFFEE. GOOD COMPANY. ALWAYS.</span></div>
+      <a class="scroll-cue" href="#about" aria-label="Scroll to discover"><span></span> Scroll to discover</a>
+    </section>
+
+    <section class="intro section-wrap" id="about">
+      <div class="intro-photo photo-frame">
+        <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Sunlit coffee shop interior with welcoming tables" loading="lazy">
+        <div class="photo-caption"><span>EST. WITH LOVE</span><span>2018 · PORTLAND, OR</span></div>
+      </div>
+      <div class="intro-copy">
+        <p class="eyebrow">A place to land</p>
+        <h2>Make room for<br><em>the good stuff.</em></h2>
+        <p>We started Morrow with a simple thought: the everyday deserves a little more care. Today, we're still doing things the slow, thoughtful way—one carefully sourced bean, one warm-from-the-oven pastry, one long conversation at a time.</p>
+        <p>Come as you are. Stay as long as you like.</p>
+        <a class="text-link dark-link" href="#visit">A little more about us <span aria-hidden="true">→</span></a>
+        <div class="intro-stats">
+          <div><strong>12<span>+</span></strong><span>years roasting</span></div>
+          <div><strong>100<span>%</span></strong><span>good intentions</span></div>
+        </div>
+      </div>
+      <div class="intro-detail">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&amp;fit=crop&amp;w=680&amp;q=85" alt="Barista preparing fresh coffee by hand" loading="lazy">
+        <span>Made slowly. Served gladly.</span>
+      </div>
+    </section>
+
+    <section class="menu-section section-wrap" id="menu">
+      <div class="section-heading">
+        <div><p class="eyebrow">Made for your kind of day</p><h2>Something <em>good</em> is brewing.</h2></div>
+        <p>From first-sip coffee to one-more-bite treats, everything here is made with a little extra love.</p>
+      </div>
+      <div class="category-tabs" role="tablist" aria-label="Menu categories">
+        <button class="category-tab active" type="button" role="tab" aria-selected="true" data-category="all">Everything</button>
+        <button class="category-tab" type="button" role="tab" aria-selected="false" data-category="hot">Hot coffee</button>
+        <button class="category-tab" type="button" role="tab" aria-selected="false" data-category="cold">Cold coffee</button>
+        <button class="category-tab" type="button" role="tab" aria-selected="false" data-category="snacks">Snacks</button>
+        <button class="category-tab" type="button" role="tab" aria-selected="false" data-category="desserts">Desserts</button>
+      </div>
+      <div class="menu-grid" id="menu-grid" aria-live="polite"></div>
+      <div class="menu-footnote"><span>✳</span> A little heads-up: our kitchen handles nuts, dairy &amp; gluten.</div>
+    </section>
+
+    <section class="specials-section" id="specials">
+      <div class="section-wrap">
+        <div class="section-heading specials-heading">
+          <div><p class="eyebrow">The ones you come back for</p><h2>A little <em>extra</em> lovely.</h2></div>
+          <a class="text-link light-link" href="#menu">All the good things <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="special-grid">
+          <article class="special-card special-large">
+            <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&amp;fit=crop&amp;w=1300&amp;q=85" alt="Signature cappuccino with delicate latte art" loading="lazy">
+            <span class="offer-tag">A HOUSE FAVORITE</span>
+            <div class="special-info"><div><p>Our signature</p><h3>Honey oat cappuccino</h3></div><span class="price">$5.50</span></div>
+          </article>
+          <article class="special-card">
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Rich chocolate fudge cake with chocolate frosting" loading="lazy">
+            <span class="offer-tag">A VERY GOOD IDEA</span>
+            <div class="special-info"><div><p>Baked here, every morning</p><h3>Chocolate fudge cake</h3></div><span class="price">$7.00</span></div>
+          </article>
+          <article class="special-card">
+            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Iced caramel coffee ready to enjoy" loading="lazy">
+            <span class="offer-tag">COOLER DAYS AHEAD</span>
+            <div class="special-info"><div><p>Cold, sweet &amp; slow-sipped</p><h3>Caramel cold coffee</h3></div><span class="price">$6.25</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews-section section-wrap" id="reviews">
+      <div class="reviews-intro">
+        <p class="eyebrow">Don't just take our word</p>
+        <h2>Kind words from<br><em>our kind of people.</em></h2>
+        <div class="review-score"><span>★★★★★</span><strong>4.9</strong><small>from 500+ happy visits</small></div>
+      </div>
+      <div class="review-grid">
+        <article class="review-card"><div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“The kind of place that remembers your name and gets your coffee just right. I came for a latte and found my new favorite corner of the city.”</blockquote><div class="review-person"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;w=120&amp;q=80" alt="" loading="lazy"><div><strong>Clara M.</strong><span>Neighborhood regular</span></div></div></article>
+        <article class="review-card review-offset"><div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“Finally, a cappuccino that's as lovely as the people making it. And don't leave without trying the chocolate cake. Trust me on this one.”</blockquote><div class="review-person"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;w=120&amp;q=80" alt="" loading="lazy"><div><strong>Jordan R.</strong><span>Cake enthusiast</span></div></div></article>
+        <article class="review-card"><div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“The sunlight, the smell of fresh pastries, the perfectly unhurried vibe. Morrow makes even a Tuesday feel a little bit special.”</blockquote><div class="review-person"><img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&amp;fit=crop&amp;w=120&amp;q=80" alt="" loading="lazy"><div><strong>Sam T.</strong><span>Morning person (now)</span></div></div></article>
+      </div>
+    </section>
+
+    <section class="visit-section" id="visit">
+      <div class="visit-photo"></div>
+      <div class="visit-content">
+        <p class="eyebrow">Your table is waiting</p>
+        <h2>Good mornings<br>start <em>right here.</em></h2>
+        <p>Come for a cup. Stay for the conversation. We'll save you a sunny spot.</p>
+        <div class="hours">
+          <div><span>Monday – Friday</span><span>8:00 AM – 10:00 PM</span></div>
+          <div><span>Saturday – Sunday</span><span>9:00 AM – 11:00 PM</span></div>
+        </div>
+        <a class="button button-light" href="#contact">Come say hello <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="contact-section section-wrap" id="contact">
+      <div class="contact-details">
+        <p class="eyebrow">Find your way to us</p>
+        <h2>We'll put<br>the kettle <em>on.</em></h2>
+        <div class="contact-item"><span class="contact-icon" aria-hidden="true">↗</span><div><span>FIND US</span><p>1248 NW Everett Street<br>Portland, OR 97209</p></div></div>
+        <div class="contact-item"><span class="contact-icon" aria-hidden="true">✳</span><div><span>GIVE US A RING</span><p><a href="tel:+15035550148">(503) 555-0148</a></p></div></div>
+        <div class="contact-item"><span class="contact-icon" aria-hidden="true">✉</span><div><span>DROP US A NOTE</span><p><a href="mailto:hello@morrowcoffee.example">hello@morrowcoffee.example</a></p></div></div>
+        <div class="social-links"><a href="https://www.instagram.com/" aria-label="Instagram">ig</a><a href="https://www.facebook.com/" aria-label="Facebook">fb</a><a href="https://www.tiktok.com/" aria-label="TikTok">tk</a></div>
+      </div>
+      <div class="contact-right">
+        <div class="map-placeholder">
+          <div class="map-wash"></div><div class="map-road road-one"></div><div class="map-road road-two"></div><div class="map-road road-three"></div>
+          <div class="map-pin"><span>m.</span></div>
+          <div class="map-card"><strong>Morrow Coffee House</strong><span>1248 NW Everett Street</span><a href="https://maps.google.com/?q=1248+NW+Everett+Street+Portland+OR" target="_blank" rel="noreferrer">Get directions ↗</a></div>
+          <span class="map-label map-label-one">PEARL DISTRICT</span><span class="map-label map-label-two">NW EVERETT ST</span>
+        </div>
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-heading"><h3>Leave us a little note.</h3><span>We read every one.</span></div>
+          <div class="form-row">
+            <label>Your name<input name="name" type="text" placeholder="How should we call you?" autocomplete="name" required minlength="2"></label>
+            <label>Email address<input name="email" type="email" placeholder="you@example.com" autocomplete="email" required></label>
+          </div>
+          <label>Your message<textarea name="message" rows="3" placeholder="What's on your mind?" required minlength="10"></textarea></label>
+          <div class="form-submit"><button class="button button-dark" type="submit">Send your note <span aria-hidden="true">↗</span></button><p class="form-status" role="status" aria-live="polite"></p></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a class="brand footer-logo" href="#home"><span class="brand-mark" aria-hidden="true">m.</span><span class="brand-name">morrow<span>coffee house</span></span></a>
+        <p>Thoughtfully sourced, lovingly made, and always better shared. See you in the morning.</p>
+      </div>
+      <div class="footer-column"><span class="footer-title">TAKE A LOOK</span><a href="#menu">Our menu</a><a href="#specials">House favorites</a><a href="#about">Our story</a><a href="#reviews">Kind words</a></div>
+      <div class="footer-column"><span class="footer-title">COME ON IN</span><a href="#visit">Hours &amp; location</a><a href="#contact">Get in touch</a><a href="tel:+15035550148">(503) 555-0148</a><a href="mailto:hello@morrowcoffee.example">Send us an email</a></div>
+      <div class="footer-note"><span>Tomorrow<br>looks good<br>from here.</span><span class="footer-spark">✳</span></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Morrow Coffee House. Made with care in Portland.</span><span>GOOD COFFEE. GOOD COMPANY. ALWAYS.</span></div>
+  </footer>
+
+  <div class="cart-overlay" data-cart-overlay hidden>
+    <aside class="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+      <div class="cart-header"><div><p class="eyebrow">A little something</p><h2 id="cart-title">Your bag <span class="cart-count">0</span></h2></div><button class="cart-close" type="button" aria-label="Close shopping cart">×</button></div>
+      <div class="cart-items" aria-live="polite"><p class="cart-empty">Your bag's taking a little break.<br>Let's find it something lovely.</p></div>
+      <div class="cart-footer"><div class="cart-total"><span>Subtotal</span><strong>$0.00</strong></div><p>Payment is taken care of at the café.</p><button class="button button-dark cart-checkout" type="button">Sounds good <span aria-hidden="true">↗</span></button></div>
+    </aside>
+  </div>
+</body>
+</html>
